@@ -4,6 +4,9 @@
 
 Resizes images to no greater than 360000 pixes (600x600). Copies resized images into a subdirectory with the category name.
 
+Requirements:
+- [imagemagick](https://imagemagick.org/index.php)
+  
 Usage:
 ```
 ./resize.sh -c category <list of images>
@@ -17,6 +20,9 @@ Example:
 ## addtag.sh
 
 Adds tags to images. Modifies image and saves copy of original in a file with _original appended.
+
+Requirements:
+- [exiftool](https://exiftool.org/)
 
 Usage:
 ```
