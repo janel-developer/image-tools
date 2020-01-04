@@ -1,20 +1,20 @@
 CATEGORY= 
-
+USAGE="Usage: $0 -c category <list of images>"
 while getopts c: o
 do
    case $o in
    c) CATEGORY=$OPTARG;;
-   [?]) print "Usage: $0 -c category <list of images>"
+   [?]) echo $USAGE
    esac
 done
 shift 2
 
 if [[ -z $CATEGORY ]]; then
-  echo "Specify a category with -c"
+  echo $USAGE
   exit 1
 fi
 
-if [[ !-d $CATEGORY ]]; then
+if [[ ! -d $CATEGORY ]]; then
   mkdir $CATEGORY
 fi
 
